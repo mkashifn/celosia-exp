@@ -1,10 +1,12 @@
 # N-BaIoT dataset
-
-from dataset import Dataset
+import os
+from src.dataset import Dataset
 
 class NbaIoT_Dataset(Dataset):
   def __init__(self):
+    super(NbaIoT_Dataset, self).__init__()
     self.name = 'N-BaIoT'
+    self.dir_dataset = 'nbaiot-dataset'
     self.devices = ['Danmini_Doorbell', 'Ecobee_Thermostat', 'Ennio_Doorbell', 'Philips_B120N10_Baby_Monitor', 'Provision_PT_737E_Security_Camera', 'Provision_PT_838_Security_Camera', 'Samsung_SNH_1011_N_Webcam', 'SimpleHome_XCS7_1002_WHT_Security_Camera', 'SimpleHome_XCS7_1003_WHT_Security_Camera']
 
     self.gafgyt = ['combo', 'junk', 'scan', 'tcp', 'udp']
@@ -14,6 +16,7 @@ class NbaIoT_Dataset(Dataset):
     return self.name
 
   def add_to_source_list(self, source_list, filename, normal):
+    filename = os.path.join(self.dir_base, self.dir_dataset, filename)
     source = {'filename': filename, 'normal': normal}
     source_list.append(source)
 
@@ -67,5 +70,5 @@ class NbaIoT_Dataset(Dataset):
     return file_list
 
   def get_dir_name(self):
-    return 'nbaiot-dataset'
+    return self.dir_dataset
 

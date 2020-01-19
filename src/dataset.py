@@ -1,8 +1,9 @@
 # Dataset abstract class
 
-class Dataset:
+class Dataset(object):
   def __init__(self):
     self.name = 'undefined'
+    self.dir_base = 'datasets'
 
   def get_name(self):
     return NotImplementedError("method get_name must be implemented")
