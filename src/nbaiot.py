@@ -17,6 +17,10 @@ class NbaIoT_Dataset(Dataset):
     source = {'filename': filename, 'normal': normal}
     source_list.append(source)
 
+  def get_source_list_by_name(self, name):
+    index = self.devices.index(name)
+    return self.get_source_list_by_index(index)
+
   def get_source_list_by_index(self, index):
     # Returns source list for 9 commercial devices as follows:
     #   Each device contains 1x benign data file and 5x gafgyt attacks (9 x 6 = 54 files).
@@ -27,17 +31,20 @@ class NbaIoT_Dataset(Dataset):
       raise Exception('index value of {} is out of range'.format(index))
 
     source_list = []
-    source_dict = {}
 
     i = index + 1
-    
     d = self.devices[index]
+
+    # Benign traffic, (normal)
     filename = '{}.benign.csv'.format(i)
     self.add_to_source_list(source_list, filename, True)
+
+    # Gafgyt traffic, (anomalous)
     for g in self.gafgyt:
       filename = '{}.gafgyt.{}.csv'.format(i, g)
       self.add_to_source_list(source_list, filename, False)
 
+    # Mirai traffic, (anomalous)
     # Filter devices that don't contain mirai attack data
     if d != 'Ennio_Doorbell' and d != 'Samsung_SNH_1011_N_Webcam':
       for m in self.mirai:
