@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Exclude datasets directory as it may contains large amounts of data
+datasets/
