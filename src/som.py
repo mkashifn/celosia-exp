@@ -40,13 +40,13 @@ class Som:
 
   def predict(self, threshold = 0.02, anomaly_label=0):
     '''Predict data as normal or anomalous based upon mean inter-neuron distance.
-       Need to call get_mid() before calling this.
+       Need to call fit() before calling this.
        Parameters: threshold = the threshold (default = 0.02) that is used to
                                determine if normal = 1 (when mid <= threshold),
                                or anomalous = 0 otherwise.
                    anomaly_label = the value to label anomalies, default = 0'''
     if self.som is None:
-      raise Exception('Call get_mid() before calling this')
+      raise Exception('Call fit() before calling this')
 
     y_pred = []
     for m in self.mid:
@@ -64,11 +64,11 @@ class Som:
          markeredgewidth = 2)
 
   def plot_distance_map_labels(self, X, Y):
-    '''Plots distance map with labels. Need to call get_mid() before calling this.
+    '''Plots distance map with labels. Need to call fit() before calling this.
        Parameters: X = input features
                    Y = labels, 1 = normal, 0 = anomalous.'''
     if self.som is None:
-      raise Exception('Call get_mid() before calling this')
+      raise Exception('Call fit() before calling this')
 
     red_set = set() # normal instances
     green_set = set() # anomalous instances
