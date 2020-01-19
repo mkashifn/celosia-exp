@@ -1,5 +1,4 @@
 import argparse
-from thirdparty import minisom
 from utils.dataset_verification import verify_dataset
 from utils.env_verification import verify_environment
 
