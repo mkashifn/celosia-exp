@@ -4,7 +4,7 @@ from utils.env_verification import verify_environment
 
 SW_VER='0.1.0'
 SW_DATE='19-Jan-2020'
-VERSION_STR=f'Celosia version {SW_VER}, {SW_DATE}'
+VERSION_STR='Celosia version {} {}'.format(SW_VER, SW_DATE)
 
 def add_arguments(parser):
   parser.add_argument("-v", "--version", help="show program version", action="store_true")

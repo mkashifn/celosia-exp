@@ -6,6 +6,9 @@ class Dataset:
   def __init__(self):
     self.name = 'undefined'
 
+  def get_name(self):
+    return NotImplementedError("method get_name must be implemented")
+
   def get_file_list(self):
     return NotImplementedError("method get_file_list must be implemented")
 
@@ -15,6 +18,9 @@ class Dataset:
 class NbaIoT_Dataset(Dataset):
   def __init__(self):
     self.name = 'N-BaIoT'
+
+  def get_name(self):
+    return self.name
 
   def get_file_list(self):
     # Returns all the 89 data files for 9 commercial devices as follows:
@@ -27,14 +33,14 @@ class NbaIoT_Dataset(Dataset):
     mirai = ['ack', 'scan', 'syn', 'udp', 'udpplain']
     file_list = []
     for i, d in enumerate(devices, 1):
-      file_list.append(f'{i}.benign.csv')
+      file_list.append('{}.benign.csv'.format(i))
       for g in gafgyt:
-        file_list.append(f'{i}.gafgyt.{g}.csv')
+        file_list.append('{}.gafgyt.{}.csv'.format(i, g))
 
       # Filter devices that don't contain mirai attack data
       if d != 'Ennio_Doorbell' and d != 'Samsung_SNH_1011_N_Webcam':
         for m in mirai:
-          file_list.append(f'{i}.mirai.{m}.csv')
+          file_list.append('{}.mirai.{}.csv'.format(i, m))
     
     return file_list
 
@@ -46,7 +52,7 @@ def verify_dataset(name):
   if name == 'nbaiot':
     dataset = NbaIoT_Dataset()
   else:
-    raise Exception(f'{name} is not valid, please specify a valid dataset name')
+    raise Exception('{} is not valid, please specify a valid dataset name'.format(name))
   input_dir = os.path.join('datasets', dataset.get_dir_name())
   file_list = dataset.get_file_list()
   i = 0
@@ -56,5 +62,5 @@ def verify_dataset(name):
         #print(f'{i:2}', file)
         i += 1
     else:
-        raise Exception(f'{f} is not present in the dataset')
-  print (f"Success! {i} data files present in the {dataset.name} dataset.")
+        raise Exception('{} is not present in the dataset'.format(f))
+  print ("Success! {} data files present in the {} dataset.".format(i, dataset.get_name()))
