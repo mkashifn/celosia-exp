@@ -1,6 +1,7 @@
 import argparse
 from utils.dataset_verification import verify_dataset
 from utils.env_verification import verify_environment
+from utils.generate_som import fetch_device_data
 
 SW_VER='0.1.0'
 SW_DATE='19-Jan-2020'
@@ -35,4 +36,6 @@ if __name__ == '__main__':
 
   if hasattr(args, 'func'):
     args.func(args)
+  
+  fetch_device_data('Ennio_Doorbell');
   
