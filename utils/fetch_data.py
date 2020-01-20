@@ -17,6 +17,7 @@ def fetch_data_from_source_list(source_list, anomaly_label=0):
     filename = source['filename']
     normal = bool(source['normal'])
     rows = int(source.get('rows', -1))
+    print("fetching {} rows from {}".format(rows, filename))
     ds = pd.read_csv(filename, index_col=0)
     if rows >= 0:
       x = ds.iloc[:rows, :].values

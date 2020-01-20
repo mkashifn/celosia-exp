@@ -20,6 +20,12 @@ class NbaIoT_Dataset(Dataset):
     source = {'filename': filename, 'normal': normal}
     source_list.append(source)
 
+  def get_device_index_by_name(self, name):
+    return self.devices.index(name)
+
+  def get_device_name_by_index(self, index):
+    return self.devices[index]
+
   def get_source_list_by_name(self, name):
     index = self.devices.index(name)
     return self.get_source_list_by_index(index)
