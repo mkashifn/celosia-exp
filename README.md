@@ -87,5 +87,5 @@ This following experiments has been moved to Kaggle. Please follow the links to 
   
   https://www.kaggle.com/mkashifn/celosia-zero-day-attack-detection
 
-##### Dynamic Network Update:
+##### Dynamic network update:
   https://www.kaggle.com/mkashifn/celosia-dynamic-network-update
