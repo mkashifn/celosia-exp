@@ -41,10 +41,25 @@ Celosia depends upon the following Python packages:
 ### Running Experiments
 ##### Compute SOM accuracy vs chosen threshold:
   ```
-  python celosia.py somaccth -d 3
+  python celosia.py somaccth -d <device-id>
   ```
+  ##### Device IDs:
+  |---|------------------------------------------|
+  | ID| Device Name                              |
+  |---|------------------------------------------|
+  | 1 | Danmini_Doorbell                         |
+  | 2 | Ecobee_Thermostat                        |
+  | 3 | Ennio_Doorbell                           |
+  | 4 | Philips_B120N10_Baby_Monitor             |
+  | 5 | Provision_PT_737E_Security_Camera        |
+  | 6 | Provision_PT_838_Security_Camera         |
+  | 7 | Samsung_SNH_1011_N_Webcam                |
+  | 8 | SimpleHome_XCS7_1002_WHT_Security_Camera |
+  | 9 | SimpleHome_XCS7_1003_WHT_Security_Camera |
+  |---|------------------------------------------|
   Sample Output:
   ```
+  python celosia.py somaccth -d 3
   Starting to compute SOM accuracy vs threshold for Ennio_Doorbell
   46 - Threshold=0.45
   ...
@@ -65,7 +80,12 @@ Celosia depends upon the following Python packages:
    [  76 3924]]
   ...
   ```
+### Kaggle Notebooks
+
+This following experiments has been moved to Kaggle. Please follow the links to access the complete code and output.
 ##### Zero-day attack detection:
-  This experiment has been moved to Kaggle instead. The complete code and output can be accessed at:
   
-  https://www.kaggle.com/mkashifn/zero-day-attack-detection
+  https://www.kaggle.com/mkashifn/celosia-zero-day-attack-detection
+
+##### Dynamic Network Update:
+  https://www.kaggle.com/mkashifn/celosia-dynamic-network-update
