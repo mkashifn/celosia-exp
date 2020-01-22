@@ -82,7 +82,8 @@ Celosia depends upon the following Python packages:
   ```
 ### Kaggle Notebooks
 
-This following experiments has been moved to Kaggle. Please follow the links to access the complete code and output.
+This following experiments has been moved to Kaggle. Please follow the links to access the complete code and output. Alternatively, you can also access the Jupyter notebook files in the snapshot directory of this repository. 
+
 ##### Zero-day attack detection:
   
   https://www.kaggle.com/mkashifn/celosia-zero-day-attack-detection
