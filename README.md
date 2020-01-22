@@ -43,20 +43,20 @@ Celosia depends upon the following Python packages:
   ```
   python celosia.py somaccth -d <device-id>
   ```
-  ##### Device IDs:
-  |---|------------------------------------------|
-  | ID| Device Name                              |
-  |---|------------------------------------------|
-  | 1 | Danmini_Doorbell                         |
-  | 2 | Ecobee_Thermostat                        |
-  | 3 | Ennio_Doorbell                           |
-  | 4 | Philips_B120N10_Baby_Monitor             |
-  | 5 | Provision_PT_737E_Security_Camera        |
-  | 6 | Provision_PT_838_Security_Camera         |
-  | 7 | Samsung_SNH_1011_N_Webcam                |
-  | 8 | SimpleHome_XCS7_1002_WHT_Security_Camera |
-  | 9 | SimpleHome_XCS7_1003_WHT_Security_Camera |
-  |---|------------------------------------------|
+  ###### Device IDs:
+
+  | Device ID| Device Name                              |
+  |---------:|:-----------------------------------------|
+  | 1        | Danmini_Doorbell                         |
+  | 2        | Ecobee_Thermostat                        |
+  | 3        | Ennio_Doorbell                           |
+  | 4        | Philips_B120N10_Baby_Monitor             |
+  | 5        | Provision_PT_737E_Security_Camera        |
+  | 6        | Provision_PT_838_Security_Camera         |
+  | 7        | Samsung_SNH_1011_N_Webcam                |
+  | 8        | SimpleHome_XCS7_1002_WHT_Security_Camera |
+  | 9        | SimpleHome_XCS7_1003_WHT_Security_Camera |
+
   Sample Output:
   ```
   python celosia.py somaccth -d 3
