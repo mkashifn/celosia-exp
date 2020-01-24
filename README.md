@@ -86,7 +86,10 @@ This following experiments has been moved to Kaggle. Please follow the links to 
 
 ##### Zero-day attack detection:
   
-  https://www.kaggle.com/mkashifn/celosia-zero-day-attack-detection
+  https://www.kaggle.com/mkashifn/celosia-zero-day-attack-detection-demo
 
 ##### Dynamic network update:
-  https://www.kaggle.com/mkashifn/celosia-dynamic-network-update
+  https://www.kaggle.com/mkashifn/celosia-dynamic-network-update-demo
+
+##### Using SOM for unsupervised labelling
+  https://www.kaggle.com/mkashifn/celosia-unsupervised-labelling-demo
