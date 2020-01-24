@@ -47,15 +47,15 @@ Celosia depends upon the following Python packages:
 
   | Device ID| Device Name                              |
   |---------:|:-----------------------------------------|
-  | 1        | Danmini_Doorbell                         |
-  | 2        | Ecobee_Thermostat                        |
-  | 3        | Ennio_Doorbell                           |
-  | 4        | Philips_B120N10_Baby_Monitor             |
-  | 5        | Provision_PT_737E_Security_Camera        |
-  | 6        | Provision_PT_838_Security_Camera         |
-  | 7        | Samsung_SNH_1011_N_Webcam                |
-  | 8        | SimpleHome_XCS7_1002_WHT_Security_Camera |
-  | 9        | SimpleHome_XCS7_1003_WHT_Security_Camera |
+  | 1        | Danmini Doorbell                         |
+  | 2        | Ecobee Thermostat                        |
+  | 3        | Ennio Doorbell                           |
+  | 4        | Philips B120N10 Baby Monitor             |
+  | 5        | Provision PT-737E Security Camera        |
+  | 6        | Provision PT-838 Security Camera         |
+  | 7        | Samsung SNH-1011N Webcam                 |
+  | 8        | SimpleHome XCS7-1002-WHT Security_Camera |
+  | 9        | SimpleHome_XCS7-1003-WHT Security Camera |
 
   Sample Output:
   ```
@@ -91,5 +91,5 @@ This following experiments has been moved to Kaggle. Please follow the links to 
 ##### Dynamic network update:
   https://www.kaggle.com/mkashifn/celosia-dynamic-network-update-demo
 
-##### Using SOM for unsupervised labelling
+##### Using SOM for unsupervised labelling:
   https://www.kaggle.com/mkashifn/celosia-unsupervised-labelling-demo
