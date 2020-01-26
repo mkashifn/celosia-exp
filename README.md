@@ -55,7 +55,7 @@ Celosia depends upon the following Python packages:
   | 6        | Provision PT-838 Security Camera         |
   | 7        | Samsung SNH-1011N Webcam                 |
   | 8        | SimpleHome XCS7-1002-WHT Security Camera |
-  | 9        | SimpleHome_XCS7-1003-WHT Security Camera |
+  | 9        | SimpleHome XCS7-1003-WHT Security Camera |
 
   Sample Output:
   ```
